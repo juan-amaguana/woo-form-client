@@ -1,0 +1,112 @@
+<div id="app" class="customer-form">
+    <div class="et_pb_row et_pb_row_9 et_pb_gutters1 et_pb_row_4col">
+        <div class="et_pb_column et_pb_column_1_4 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough">
+            <input v-model="name" type="text" class="input-text" id="floatingInput" placeholder="Nombre">
+        </div>
+
+        <div class="et_pb_column et_pb_column_1_4 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough">
+            <input v-model="last_name" type="text" class="input-text" id="floatingInput" placeholder="Apellido">
+        </div>
+
+        <div class="et_pb_column et_pb_column_1_4 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough">
+            <input v-model="email" type="email" class="input-text" id="floatingInput" placeholder="Email">
+        </div>
+
+        <div class="et_pb_column et_pb_column_1_4 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
+            <button type="button" class="" :disabled='isDisabled' v-on:click="sendForm()">Descargar > </button>
+        </div>
+    </div>
+
+    <br>
+    <div class="terms">
+        <input class="checkbox-round" v-model="checked" @change="onChange($event)" type="checkbox"
+            name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="" for="flexRadioDefault1">
+            Acepto recibir contenido de HAPN vía correo electrónico.
+        </label>
+    </div>
+
+    <br>
+    <div class="notification error" v-if="error && error !== '' "> {{ error }} </div>
+    <div class="notification success" v-if="message && message !== '' "> {{ message }} </div>
+
+</div>
+
+
+<style>
+    .customer-form .et_pb_row {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .customer-form .et_pb_column {
+        padding: 5px 5px 5px 5px;
+    }
+
+    .customer-form .input-text {
+        height: 50px;
+        width: 100%;
+        padding: 5px 6px 5px 6px;
+        border-radius: 10px;
+        background: #fffdfd9e;
+        border: 1px solid black;
+    }
+
+    .customer-form button {
+        background: #ff6a00;
+        color: #fff;
+        border: 0px;
+        font-family: 'Roboto-BoldCondensed';
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .customer-form button:disabled,
+    button[disabled] {
+        background-color: #cccccc;
+        color: #666666;
+    }
+
+    .customer-form .checkbox-round {
+        width: 1.3em;
+        height: 1.3em;
+        background-color: white;
+        border-radius: 50% !important;
+        vertical-align: middle !important;
+        border: 1px solid #ddd !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        outline: none !important;
+        cursor: pointer !important;
+        margin-right: 10px;
+    }
+
+    .customer-form .checkbox-round:checked {
+        background-color: gray !important;
+    }
+
+    .customer-form .terms {
+        text-align: center;
+        font-size: 1rem;
+        font-family: 'Roboto-BoldCondensed';
+        color: #000;
+    }
+
+    .customer-form .notification {
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: 'Roboto';
+        height: 10px;
+    }
+
+    .customer-form .error {
+        color: red;
+    }
+
+    .customer-form .success {
+        color: #ff6a00;
+    }
+</style>

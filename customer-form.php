@@ -118,20 +118,20 @@ class Wp3DEngine {
         $html = '<div style="width:100%;">
         <div style="text-align:center;background: rgb(214,78,20);background: linear-gradient(172deg, rgba(214,78,20,1) 58%, rgba(255,255,255,1) 58%);padding:30px">
           <br/>
-          <img src="https://new-site.hapn.biz/wp-content/uploads/2022/10/mail-logo-1.png">
+          <img src="https://hapn.biz/wp-content/uploads/2022/10/mail-logo-1.png">
           <br/>
           <p style="text-align:center;color:#fff;font-size: 14px;font-weight: 600;">
             <br/>
             ¡Muchas Gracias por tu Interés!
           </p>
-          <img src="https://new-site.hapn.biz/wp-content/uploads/2022/09/book-test_1-min.png" width="40%">
+          <img src="https://hapn.biz/wp-content/uploads/2022/10/new-book-min.png" width="40%">
         </div>
         <div style="text-align:center;background: #fff;">
           <div style="text-align: justify;width:70%;margin:auto">
             Y felicitaciones por dar el primer paso para impulsar tu carrera con las tecnologías de Inteligencia Artificial. GPT3 es sólo la puerta de entrada a este fascinante mundo de oportunidades profesionales y de negocio.
           </div>
           <br/><br/>
-          <img src="https://new-site.hapn.biz/wp-content/uploads/2022/10/mail-firma.png"/>
+          <img src="https://hapn.biz/wp-content/uploads/2022/10/mail-firma.png"/>
             <br/><br/><br/>
         <div style="color: #fff;background: #FF6A00;padding: 10px;border-radius: 10px;text-decoration: none;width: 250px;margin:auto">'.do_shortcode('[wp_otfd id="1" title="Descargar Capítulos Iniciales" class="btn-download-pdf"]').'</div>
         <br/><br/>

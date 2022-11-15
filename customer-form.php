@@ -96,7 +96,7 @@ class Wp3DEngine {
             update_user_meta( $user_id, "last_name", $lastname );
             // in the end, returns success json data
             $this->sendEmail($email);
-            wp_send_json_success([ 'message' => 'Gracias por suscribirte en un momento llegara tu muestra gratis'  ]);
+            wp_send_json_success([ 'message' => '¡Listo!. Esperamos te sean muy útiles los primeros capítulos del libro.'  ]);
         }
         // $this->sendEmail();
     }
@@ -107,7 +107,7 @@ class Wp3DEngine {
 
     public function sendEmail($email){
         $to = $email;
-        $subject = 'Capítulos Iniciales';
+        $subject = 'Mi otro BRaiN - ¡Muchas gracias por descargar la muestra gratuita!';
         $body = $this->emailPdf();
         $headers = array('Content-Type: text/html; charset=UTF-8');
 
@@ -115,28 +115,7 @@ class Wp3DEngine {
     }
 
     public function emailPdf(){
-        $html = '<div style="width:100%;">
-        <div style="text-align:center;background: rgb(214,78,20);background: linear-gradient(172deg, rgba(214,78,20,1) 58%, rgba(255,255,255,1) 58%);padding:30px">
-          <br/>
-          <img src="https://hapn.biz/wp-content/uploads/2022/10/mail-logo-1.png">
-          <br/>
-          <p style="text-align:center;color:#fff;font-size: 14px;font-weight: 600;">
-            <br/>
-            ¡Muchas Gracias por tu Interés!
-          </p>
-          <img src="https://hapn.biz/wp-content/uploads/2022/10/new-book-min.png" width="40%">
-        </div>
-        <div style="text-align:center;background: #fff;">
-          <div style="text-align: justify;width:70%;margin:auto">
-            Y felicitaciones por dar el primer paso para impulsar tu carrera con las tecnologías de Inteligencia Artificial. GPT3 es sólo la puerta de entrada a este fascinante mundo de oportunidades profesionales y de negocio.
-          </div>
-          <br/><br/>
-          <img src="https://hapn.biz/wp-content/uploads/2022/10/mail-firma.png"/>
-            <br/><br/><br/>
-        <div style="color: #fff;background: #FF6A00;padding: 10px;border-radius: 10px;text-decoration: none;width: 250px;margin:auto">'.do_shortcode('[wp_otfd id="1" title="Descargar Capítulos Iniciales" class="btn-download-pdf"]').'</div>
-        <br/><br/>
-        </div>
-      </div>';
+        $html = '<div style="width:100%"><div style="text-align:center;background:#d64e14;background:linear-gradient(172deg,rgba(214,78,20,1) 58%,rgba(255,255,255,1) 58%);padding:30px"><br><img src="https://hapn.biz/wp-content/uploads/2022/10/mail-logo-1.png"><br><p style="text-align:center;color:#fff;font-size:14px;font-weight:600"><br>¡Muchas Gracias por tu Interés!</p><img src="https://firebasestorage.googleapis.com/v0/b/web-images-f015c.appspot.com/o/hapn%2Fbook-hapn%402x-min.png?alt=media&token=b34a391b-7fc3-449e-b37f-821ef459a6e6" width="40%"></div><div style="text-align:center;background:#fff"><div style="text-align:justify;width:70%;margin:auto"><p>Tienes ahora en tu poder los primeros capítulos del libro “Mi otro BRaiN”, que es una guía para impulsar tu carrera incorporando a tu día a día un asistente de pensamiento basado en GPT3, una de las herramientas de inteligencia artificial más avanzadas que existen a la fecha.<p><p>Son tiempos muy interesantes, pues como podrás ver en el libro, ¡no necesitas ningún conocimiento técnico para poder lograrlo!<p><p>Así que espero le saques todo el provecho a esta herramienta, y veas como tu forma de aprender, pensar y trabajar se impulsan tremendamente.<p><p>El libro completo en versión digital se publicará a finales de enero de 2023 y ahora está en pleno proceso de producción. Así que si quieres aprovechar de haber conocido de él antes de su publicación, puedes hacer aquí una compra anticipada y obtener un descuento del 30% del precio que tendrá en el lanzamiento. A cambio podrás descargarte dos capítulos adicionales que te permitirán conocer cómo empezar a usar GPT3 eficazmente hoy mismo! En la fecha de publicación recibirás el libro completo en esta dirección de correo electrónico en la que ahora lees este mensaje.<p><p>¡Muchas gracias nuevamente por tu interés y que lo disfrutes!<br>Jorge<p></div><br><br><img src="https://hapn.biz/wp-content/uploads/2022/10/mail-firma.png"><br><br><br><div style="color:#fff;background:#ff6a00;padding:10px;border-radius:10px;text-decoration:none;width:250px;margin:auto">'.do_shortcode('[wp_otfd id="1" title="Descargar Capítulos Iniciales" class="btn-download-pdf"]').'</div><br><br></div></div>';
         return $html;
     }
 

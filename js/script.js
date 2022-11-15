@@ -50,9 +50,13 @@ createApp({
           console.log(output.data);
           if (output.data && output.data.error) {
             const msg = output.data.error.split(".");
-            self.error = msg[0];
+            console.log(msg);
+            // self.error = msg[0];
+            self.error =
+              " Esa dirección de correo electrónico ya está registrada. Prueba con otra por favor.";
           } else {
-            self.message = "Gracias por suscribirte en unos minutos recibiras tu muestra gratis.";
+            self.message =
+              "¡Listo!. Esperamos te sean muy útiles los primeros capítulos del libro.";
           }
 
           self.isDisabled = false;

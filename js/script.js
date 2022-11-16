@@ -55,8 +55,7 @@ createApp({
             self.error =
               " Esa dirección de correo electrónico ya está registrada. Prueba con otra por favor.";
           } else {
-            self.message =
-              "¡Listo!. Esperamos te sean muy útiles los primeros capítulos del libro.";
+            self.message = "¡Listo! Los primeros capítulos gratuitos ya están en tu correo.";
           }
 
           self.isDisabled = false;
